@@ -9,14 +9,14 @@ load_dotenv()
 
 @tool
 def calculator(a:float, b:float) -> str:
-    '''useful for when you need to perform calculations.'''
+    '''Useful for performing basic arithmetric calculations.'''
     print(f"performing calculation of {a} and {b}")
     return f"the sum of {a} and {b} is {a + b}"
 
 def main():
     model = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
-    tools = []
+    tools = [calculator]
   
     agent_executor = create_react_agent(model,tools)
     print("\nWelcome! i am your Ai assistant. type 'quit' to exit.")
