@@ -10,7 +10,6 @@ load_dotenv()
 @tool
 def calculator(a:float, b:float) -> str:
     '''Useful for performing basic arithmetric calculations.'''
-    print(f"performing calculation of {a} and {b}")
     return f"the sum of {a} and {b} is {a + b}"
 
 def main():
