@@ -7,6 +7,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+@tool
+def calculator(a:float, b:float) -> str:
+    '''useful for when you need to perform calculations.'''
+    print(f"performing calculation of {a} and {b}")
+    return f"the sum of {a} and {b} is {a + b}"
+
 def main():
     model = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
